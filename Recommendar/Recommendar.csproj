@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -25,6 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.6</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -225,6 +227,53 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Front-end\karma.conf.js" />
+    <Content Include="Front-end\protractor.conf.js" />
+    <Content Include="Front-end\src\app\app.component.css" />
+    <Content Include="Front-end\src\app\app.component.html" />
+    <Content Include="Front-end\src\app\containers\full-layout\full-layout.component.html" />
+    <Content Include="Front-end\src\app\containers\simple-layout\simple-layout.component.html" />
+    <Content Include="Front-end\src\app\views\base\cards.component.html" />
+    <Content Include="Front-end\src\app\views\base\carousels.component.html" />
+    <Content Include="Front-end\src\app\views\base\collapses.component.html" />
+    <Content Include="Front-end\src\app\views\base\forms.component.html" />
+    <Content Include="Front-end\src\app\views\base\paginations.component.html" />
+    <Content Include="Front-end\src\app\views\base\popovers.component.html" />
+    <Content Include="Front-end\src\app\views\base\progress.component.html" />
+    <Content Include="Front-end\src\app\views\base\switches.component.html" />
+    <Content Include="Front-end\src\app\views\base\tables.component.html" />
+    <Content Include="Front-end\src\app\views\base\tabs.component.html" />
+    <Content Include="Front-end\src\app\views\base\tooltips.component.html" />
+    <Content Include="Front-end\src\app\views\buttons\brand-buttons.component.html" />
+    <Content Include="Front-end\src\app\views\buttons\buttons.component.html" />
+    <Content Include="Front-end\src\app\views\buttons\dropdowns.component.html" />
+    <Content Include="Front-end\src\app\views\chartjs\chartjs.component.html" />
+    <Content Include="Front-end\src\app\views\dashboard\dashboard.component.html" />
+    <Content Include="Front-end\src\app\views\icons\flags.component.html" />
+    <Content Include="Front-end\src\app\views\icons\font-awesome.component.html" />
+    <Content Include="Front-end\src\app\views\icons\simple-line-icons.component.html" />
+    <Content Include="Front-end\src\app\views\notifications\alerts.component.html" />
+    <Content Include="Front-end\src\app\views\notifications\badges.component.html" />
+    <Content Include="Front-end\src\app\views\notifications\modals.component.html" />
+    <Content Include="Front-end\src\app\views\pages\404.component.html" />
+    <Content Include="Front-end\src\app\views\pages\500.component.html" />
+    <Content Include="Front-end\src\app\views\pages\login.component.html" />
+    <Content Include="Front-end\src\app\views\pages\register.component.html" />
+    <Content Include="Front-end\src\app\views\theme\colors.component.html" />
+    <Content Include="Front-end\src\app\views\theme\typography.component.html" />
+    <Content Include="Front-end\src\app\views\widgets\widgets.component.html" />
+    <Content Include="Front-end\src\assets\favicon.ico" />
+    <Content Include="Front-end\src\assets\img\avatars\1.jpg" />
+    <Content Include="Front-end\src\assets\img\avatars\2.jpg" />
+    <Content Include="Front-end\src\assets\img\avatars\3.jpg" />
+    <Content Include="Front-end\src\assets\img\avatars\4.jpg" />
+    <Content Include="Front-end\src\assets\img\avatars\5.jpg" />
+    <Content Include="Front-end\src\assets\img\avatars\6.jpg" />
+    <Content Include="Front-end\src\assets\img\avatars\7.jpg" />
+    <Content Include="Front-end\src\assets\img\avatars\8.jpg" />
+    <Content Include="Front-end\src\assets\img\brand\logo.svg" />
+    <Content Include="Front-end\src\assets\img\brand\sygnet.svg" />
+    <Content Include="Front-end\src\index.html" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -247,6 +296,27 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Front-end\.angular-cli.json" />
+    <Content Include="Front-end\.editorconfig" />
+    <Content Include="Front-end\.gitignore" />
+    <Content Include="Front-end\CHANGELOG.md" />
+    <Content Include="Front-end\CONTRIBUTING.md" />
+    <Content Include="Front-end\e2e\tsconfig.e2e.json" />
+    <Content Include="Front-end\ISSUE_TEMPLATE.md" />
+    <Content Include="Front-end\LICENSE" />
+    <Content Include="Front-end\package-lock.json" />
+    <Content Include="Front-end\package.json" />
+    <Content Include="Front-end\README.md" />
+    <Content Include="Front-end\src\assets\.gitkeep" />
+    <Content Include="Front-end\src\scss\style.scss" />
+    <Content Include="Front-end\src\scss\vendors\chart.js\chart.scss" />
+    <Content Include="Front-end\src\scss\vendors\_variables.scss" />
+    <Content Include="Front-end\src\scss\_custom.scss" />
+    <Content Include="Front-end\src\scss\_variables.scss" />
+    <Content Include="Front-end\src\tsconfig.app.json" />
+    <Content Include="Front-end\src\tsconfig.spec.json" />
+    <Content Include="Front-end\tsconfig.json" />
+    <Content Include="Front-end\tslint.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -285,11 +355,82 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Front-end\e2e\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="Front-end\e2e\app.po.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\app.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\app.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\app.routing.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\containers\full-layout\full-layout.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\containers\full-layout\index.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\containers\index.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\containers\simple-layout\index.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\containers\simple-layout\simple-layout.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\base\base-routing.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\base\base.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\base\cards.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\base\carousels.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\base\collapses.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\base\forms.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\base\paginations.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\base\popovers.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\base\progress.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\base\switches.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\base\tables.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\base\tabs.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\base\tooltips.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\buttons\brand-buttons.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\buttons\buttons-routing.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\buttons\buttons.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\buttons\buttons.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\buttons\dropdowns.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\chartjs\chartjs-routing.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\chartjs\chartjs.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\chartjs\chartjs.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\dashboard\dashboard-routing.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\dashboard\dashboard.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\icons\flags.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\icons\font-awesome.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\icons\icons-routing.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\icons\icons.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\icons\simple-line-icons.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\notifications\alerts.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\notifications\badges.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\notifications\modals.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\notifications\notifications-routing.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\notifications\notifications.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\pages\404.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\pages\500.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\pages\login.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\pages\pages-routing.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\pages\pages.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\pages\register.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\theme\colors.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\theme\theme-routing.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\theme\theme.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\theme\typography.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\widgets\widgets-routing.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\widgets\widgets.component.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\views\widgets\widgets.module.ts" />
+    <TypeScriptCompile Include="Front-end\src\app\_nav.ts" />
+    <TypeScriptCompile Include="Front-end\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="Front-end\src\environments\environment.ts" />
+    <TypeScriptCompile Include="Front-end\src\main.ts" />
+    <TypeScriptCompile Include="Front-end\src\polyfills.ts" />
+    <TypeScriptCompile Include="Front-end\src\test.ts" />
+    <TypeScriptCompile Include="Front-end\src\typings.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
