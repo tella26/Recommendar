@@ -14,17 +14,17 @@ export const navItems = [
     children: [
       {
         name: 'All Users',
-        url: '',
+        url: '/dashboard',
         icon: 'icon-puzzle'
       },
       {
         name: 'Add New',
-        url: '',
+        url: '/dashboard',
         icon: 'icon-puzzle'
       },
       {
         name: 'Categories',
-        url: '',
+        url: '/dashboard',
         icon: 'icon-puzzle'
       },
     ]
@@ -36,25 +36,20 @@ export const navItems = [
     children: [
       {
         name: 'Plugins',
-        url: '',
+        url: '/dashboard',
         icon: 'icon-cursor'
       },
       {
         name: 'Imports',
-        url: '',
+        url: '/dashboard',
         icon: 'icon-cursor'
       },
       {
         name: 'Exports',
-        url: '',
+        url: '/dashboard',
         icon: 'icon-cursor'
       }
     ]
-  },
-  {
-    name: 'Recommendation',
-    url: '',
-    icon: 'icon-pie-chart'
   },
   {
     name: 'Settings',
@@ -63,7 +58,7 @@ export const navItems = [
     children: [
       {
         name: 'General',
-        url: '',
+        url: '/dashboard',
         icon: 'icon-star',
         badge: {
           variant: 'success',
@@ -71,7 +66,7 @@ export const navItems = [
       },
       {
         name: 'Appearance',
-        url: '',
+        url: '/dashboard',
         icon: 'icon-star',
         badge: {
           variant: 'secondary',
@@ -79,7 +74,7 @@ export const navItems = [
       },
       {
         name: 'Media',
-        url: '',
+        url: '/dashboard',
         icon: 'icon-star'
       }
     ]

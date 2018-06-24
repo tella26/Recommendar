@@ -1,24 +1,50 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './Account/home/index';
+import { AuthGuard } from './Account/_guards/index';
 
 // Import Containers
-import {
-  FullLayoutComponent,
-  SimpleLayoutComponent
-} from './containers';
+import { DefaultLayoutComponent } from './containers';
+
+import { P404Component } from './views/error/404.component';
+import { P500Component } from './views/error/500.component';
+import { LoginComponent } from './Account/login/login.component';
+import { RegisterComponent } from './Account/register/register.component';
 
 export const routes: Routes = [
-  {
+ 
+  { 
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'login',
     pathMatch: 'full',
-  },
-  {
-    path: '',
-    component: FullLayoutComponent,
+        canActivate: [
+      AuthGuard
+    ] ,
     data: {
       title: 'Home'
     },
+  },
+  { 
+    path: 'login',
+    component: LoginComponent
+     },
+  { 
+      path: 'home',
+      component: HomeComponent
+  },
+  { 
+    path: 'register', 
+    component: RegisterComponent 
+},
+  {
+    path: 'full-layout',
+    component: DefaultLayoutComponent,
+    data: {
+      title: 'Admin'
+    },
+    canActivate:[
+      AuthGuard
+    ],
     children: [
       {
         path: 'base',
@@ -51,19 +77,6 @@ export const routes: Routes = [
       {
         path: 'widgets',
         loadChildren: './views/widgets/widgets.module#WidgetsModule'
-      }
-    ]
-  },
-  {
-    path: 'pages',
-    component: SimpleLayoutComponent,
-    data: {
-      title: 'Pages'
-    },
-    children: [
-      {
-        path: '',
-        loadChildren: './views/pages/pages.module#PagesModule',
       }
     ]
   }
