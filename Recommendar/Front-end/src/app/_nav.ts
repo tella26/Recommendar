@@ -1,7 +1,7 @@
 export const navItems = [
   {
     name: 'Dashboard',
-    url: '/dashboard',
+    url: '/dashboard/',
     icon: 'icon-speedometer',
     badge: {
       variant: 'info',

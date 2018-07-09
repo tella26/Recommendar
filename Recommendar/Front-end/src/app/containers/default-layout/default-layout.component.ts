@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { navItems } from './../../_nav';
-
+import{ DashboardComponent } from './../../views/dashboard/dashboard.component'
 @Component({
   selector: 'app-dashboard',
   templateUrl: './default-layout.component.html'
