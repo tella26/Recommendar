@@ -34,6 +34,14 @@
                         <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
                      </div>
                    
+                     <div class="input-group mb-3" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="icon-user"></i></span>
+                      </div>
+                      <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" placeholder="Email" required />
+                      <div *ngIf="f.submitted && !email.valid" class="help-block">Email is required</div>
+                   </div>
+
                   <div class="input-group mb-4" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="icon-lock"></i></span>
